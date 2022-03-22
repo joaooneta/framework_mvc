@@ -7,12 +7,12 @@
         //Actions teste
         public function index(){
             $this->view->arrayTeste = array('DadoIndex1', 'DadoIndex2', 'DadosIndex3');
-            $this->render('index');
+            $this->render('index', 'layouthome');
         }
 
         public function contato(){
             $this->view->arrayTeste = array('DadosContato1', 'DadosContato2', 'DadosContato3');
-            $this->render('contato');
+            $this->render('contato', 'layoutbase');
         }
 
     }
