@@ -4,7 +4,7 @@
     echo '<p>Action contato</p>';
 
     foreach($this->view->arrayTeste as $key => $dado){  
-        echo "$dado</br>";
+        echo $dado['email'] . " - " . $dado['telefone'] . "</br>";
     }
 
 ?>

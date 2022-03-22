@@ -1,22 +1,16 @@
 <?php
     namespace App\Controllers;
+
     use MF\Controller\Action;
-    use App\Connection;
+    use MF\Model\Container;
     use App\Models\Produto;
+    use App\Models\Contato;
 
     class IndexController extends Action{
 
         //Actions teste
         public function index(){
-            //$this->view->arrayTeste = array('DadoIndex1', 'DadoIndex2', 'DadosIndex3');
-
-            //Recuperação da instância da conexão
-            $conn = Connection::getDb();
-
-            //Instância da classe teste Produto
-            $produto = new Produto($conn);
-
-            //Recuperando array de teste
+            $produto = Container::getModel('Produto');
             $produtos = $produto->getProdutos();
             $this->view->arrayTeste = $produtos;
 
@@ -24,7 +18,10 @@
         }
 
         public function contato(){
-            $this->view->arrayTeste = array('DadosContato1', 'DadosContato2', 'DadosContato3');
+            $contato = Container::getModel('Contato');
+            $contatos = $contato->getContatos();
+            $this->view->arrayTeste = $contatos;
+
             $this->render('contato', 'layoutbase');
         }
 
