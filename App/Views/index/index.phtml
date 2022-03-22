@@ -4,7 +4,7 @@
     echo '<p>index</p>';
 
     foreach($this->view->arrayTeste as $key => $dado){
-        echo "$dado</br>";
+        echo $dado['id'] . "-" . $dado['descricao'] . "-" . $dado['preco'] . "</br>";
     }
 
 ?>
