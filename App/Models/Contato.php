@@ -1,13 +1,9 @@
 <?php
 
     namespace App\Models;
+    use MF\Model\Model;
 
-    class Contato{
-        protected $db;
-
-        public function __construct(\PDO $db){
-            $this->db = $db;
-        }
+    class Contato extends Model{
 
         public function getContatos(){
             $query = 'SELECT email, telefone FROM tb_contatos;';
