@@ -2,6 +2,7 @@
 
     namespace MF\Model;
 
+    //Variáveis & métodos comuns a todos os models
     abstract class Model{
         protected $db;
 

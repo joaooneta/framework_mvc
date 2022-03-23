@@ -24,7 +24,7 @@
             
         }
 
-        //Requisição da View pelo controller a partir do arquivo index.php
+        //Requisição da View pelo controller a partir da página index
         protected function content(){
             //Encontrando dinamicamente o diretório da view solicitado pelo controller
             $controller = get_class($this);

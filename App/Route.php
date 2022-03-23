@@ -4,7 +4,7 @@
 
     class Route extends Bootstrap{
         
-        //Método responsável por definir as rotas do sistema
+        //Rotas do sistema
         protected function initRoutes(){
 
             //Rota Home

@@ -8,7 +8,7 @@
 
     class IndexController extends Action{
 
-        //Actions teste
+        //Action PATH index
         public function index(){
             $produto = Container::getModel('Produto');
             $produtos = $produto->getProdutos();
@@ -17,6 +17,7 @@
             $this->render('index', 'layouthome');
         }
 
+        //Action PATH contato
         public function contato(){
             $contato = Container::getModel('Contato');
             $contatos = $contato->getContatos();
